@@ -53,10 +53,10 @@ function AlarmOption() {
         </select>
         <select {...setAmPmOption}>
           <option disabled value="Am-Pm">
-            Am/Pm
+            AM/PM
           </option>
-          <option value="AM">Am</option>
-          <option value="PM">Pm</option>
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
         </select>
       </div>
       <button

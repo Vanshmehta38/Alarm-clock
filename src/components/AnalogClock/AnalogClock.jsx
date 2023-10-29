@@ -24,7 +24,7 @@ function AnalogClock() {
 
   return (
     <div className="clock__circle">
-      <FcAlarmClock className={`alarm-icon ${hasAlarm && 'active'}`} />
+      <FcAlarmClock className={`alarm-icon ${hasAlarm && "active"}`} />
       <span className="clock__twelve"></span>
       <span className="clock__three"></span>
       <span className="clock__six"></span>

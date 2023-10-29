@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import months from "../../data";
-import Sound from "../../mixkit-casino-win-alarm-and-coins-1990.mp3";
+import Sound from "../../alarmRing.mp3";
 
 const alarm = new Audio(Sound);
 export const AlarmContext = createContext();
@@ -8,6 +8,7 @@ export const AlarmContext = createContext();
 function ContextAlarm({ children }) {
   const [hourDigital, setHourDigital] = useState("");
   const [minutesDigital, setMinutesDigital] = useState("");
+  const [secondsDigital, setSecondsDigital] = useState("");
   const [amPm, setAmPm] = useState("");
   const [dayNow, setDayNow] = useState("");
   const [monthNow, setMonthNow] = useState("");
@@ -21,6 +22,7 @@ function ContextAlarm({ children }) {
 
       let HH = date.getHours(),
         MM = date.getMinutes(),
+        SS = date.getSeconds(),
         day = date.getDate(),
         month = date.getMonth(),
         year = date.getFullYear(),
@@ -39,6 +41,7 @@ function ContextAlarm({ children }) {
 
       setHourDigital(HH);
       setMinutesDigital(MM);
+      setSecondsDigital(SS);
       setAmPm(ampm);
       setDayNow(day);
       setMonthNow(months[month]);
@@ -61,6 +64,7 @@ function ContextAlarm({ children }) {
       value={{
         hourDigital,
         minutesDigital,
+        secondsDigital,
         amPm,
         dayNow,
         monthNow,

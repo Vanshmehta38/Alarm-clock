@@ -4,7 +4,8 @@
 }
 
 .clock__text-hour,
-.clock__text-minutes {
+.clock__text-minutes,
+.clock__text-seconds {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-medium);
   color: var(--title-color);

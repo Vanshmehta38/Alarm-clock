@@ -3,14 +3,22 @@ import "./DigitalClock.css";
 import { AlarmContext } from "../context/ContextAlarm";
 
 function DigitalClock() {
-  const { hourDigital, minutesDigital, amPm, dayNow, monthNow, yearNow } =
-    useContext(AlarmContext);
+  const {
+    hourDigital,
+    minutesDigital,
+    secondsDigital,
+    amPm,
+    dayNow,
+    monthNow,
+    yearNow,
+  } = useContext(AlarmContext);
 
   return (
     <div>
       <div className="clock__text">
         <div className="clock__text-hour">{`${hourDigital}:`}</div>
-        <div className="clock__text-minutes">{minutesDigital}</div>
+        <div className="clock__text-minutes">{`${minutesDigital}:`}</div>
+        <div className="clock__text-seconds">{`${secondsDigital}`}</div>
         <div className="clock__text-ampm">{amPm}</div>
       </div>
 
